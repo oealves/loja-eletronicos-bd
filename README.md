@@ -79,15 +79,17 @@ Conforme representado no diagrama conceitual do projeto, foram definidas as segu
 * **CATEGORIAS_PRODUTOS — PRODUTOS:** `(1:N)` — Um para Muitos (Uma categoria pode ter vários produtos)
 * **CLIENTES — PEDIDOS:** `(1:N)` — Um para Muitos (Um cliente pode fazer vários pedidos)
 * **PEDIDOS — PRODUTOS:** `(N:M)` — Muitos para Muitos (Resolvido pela entidade associativa `ITENS_PEDIDOS`)
+  
 ### 5.3. Diagrama Entidade-Relacionamento (DER)
+
 ### 5.3. Diagrama Entidade-Relacionamento (DER)
 
 ```mermaid
 erDiagram
-    CATEGORIAS_PRODUTOS ||--o{ PRODUTOS : "possui"
-    CLIENTES ||--o{ PEDIDOS : "realiza"
-    PEDIDOS ||--o{ ITENS_PEDIDOS : "contém"
-    PRODUTOS ||--o{ ITENS_PEDIDOS : "consta em"
+    CATEGORIAS_PRODUTOS ||--o{ PRODUTOS : possui
+    CLIENTES ||--o{ PEDIDOS : realiza
+    PEDIDOS ||--o{ ITENS_PEDIDOS : contem
+    PRODUTOS ||--o{ ITENS_PEDIDOS : consta_em
 
     CLIENTES {
         int id_cliente PK
@@ -117,7 +119,7 @@ erDiagram
         int id_pedido PK
         date data_pedido
         decimal total_pedido
-        enum status
+        string status
         int id_cliente FK
     }
 
@@ -128,6 +130,7 @@ erDiagram
         int id_pedido FK
         int id_produto FK
     }
+
 ---
 
 ## 💻 6. Scripts SQL & Execução
