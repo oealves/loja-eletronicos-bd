@@ -82,7 +82,7 @@ Conforme representado no diagrama conceitual do projeto, foram definidas as segu
   
 ### 5.3. Diagrama Entidade-Relacionamento (DER)
 
-
+![Diagrama Entidade-Relacionamento](der.png)
 ---
 
 ## 💻 6. Scripts SQL & Execução
