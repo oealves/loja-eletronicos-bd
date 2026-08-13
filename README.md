@@ -82,8 +82,6 @@ Conforme representado no diagrama conceitual do projeto, foram definidas as segu
   
 ### 5.3. Diagrama Entidade-Relacionamento (DER)
 
-### 5.3. Diagrama Entidade-Relacionamento (DER)
-
 ```mermaid
 erDiagram
     CATEGORIAS_PRODUTOS ||--o{ PRODUTOS : possui
@@ -130,7 +128,6 @@ erDiagram
         int id_pedido FK
         int id_produto FK
     }
-
 ---
 
 ## 💻 6. Scripts SQL & Execução
