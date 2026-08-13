@@ -41,7 +41,7 @@ O objetivo deste projeto é estruturar do zero a base de dados relacional de um 
 ---
 
 ## 📐 4. Modelo Conceitual (Entidades e Atributos)
-
+![Modelo Conceitual de Dados](modelo_conceitual.png)
 Conforme representado no diagrama conceitual do projeto, foram definidas as seguintes entidades e seus respectivos atributos:
 
 * **Clientes:** `id_cliente`, `nome`, `email`, `telefone`, `data_cadastro`, `endereco`
