@@ -82,52 +82,7 @@ Conforme representado no diagrama conceitual do projeto, foram definidas as segu
   
 ### 5.3. Diagrama Entidade-Relacionamento (DER)
 
-```mermaid
-erDiagram
-    CATEGORIAS_PRODUTOS ||--o{ PRODUTOS : possui
-    CLIENTES ||--o{ PEDIDOS : realiza
-    PEDIDOS ||--o{ ITENS_PEDIDOS : contem
-    PRODUTOS ||--o{ ITENS_PEDIDOS : consta_em
 
-    CLIENTES {
-        int id_cliente PK
-        string nome
-        string email
-        string telefone
-        date data_cadastro
-        string endereco
-    }
-
-    CATEGORIAS_PRODUTOS {
-        int id_categoria PK
-        string nome_categoria
-        string descricao
-    }
-
-    PRODUTOS {
-        int id_produto PK
-        string nome_produto
-        string descricao
-        decimal preco
-        int estoque
-        int id_categoria FK
-    }
-
-    PEDIDOS {
-        int id_pedido PK
-        date data_pedido
-        decimal total_pedido
-        string status
-        int id_cliente FK
-    }
-
-    ITENS_PEDIDOS {
-        int id_item PK
-        int quantidade
-        decimal preco_unitario
-        int id_pedido FK
-        int id_produto FK
-    }
 ---
 
 ## 💻 6. Scripts SQL & Execução
