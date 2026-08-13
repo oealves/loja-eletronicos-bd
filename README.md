@@ -80,6 +80,7 @@ Conforme representado no diagrama conceitual do projeto, foram definidas as segu
 * **CLIENTES — PEDIDOS:** `(1:N)` — Um para Muitos (Um cliente pode fazer vários pedidos)
 * **PEDIDOS — PRODUTOS:** `(N:M)` — Muitos para Muitos (Resolvido pela entidade associativa `ITENS_PEDIDOS`)
 ### 5.3. Diagrama Entidade-Relacionamento (DER)
+### 5.3. Diagrama Entidade-Relacionamento (DER)
 
 ```mermaid
 erDiagram
